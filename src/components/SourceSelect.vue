@@ -1,6 +1,7 @@
 <template>
-    Select Source
-  <select @change="onchange" v-model="selected">
+   
+  <select class="form-select w-full block p-3 my-2 md:my-10 border rounded" @change="onchange" v-model="selected">
+      <option value="0">Select Source</option>
       <option v-for="source in sources" :key="source.id" :value="source.id">
           {{source.id}}
       </option>

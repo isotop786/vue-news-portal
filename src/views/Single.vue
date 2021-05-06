@@ -1,18 +1,46 @@
 <template>
-  single page {{id}} source {{source}}
 
-  <!-- {{article}} -->
 
-  <!-- <h3>{{article.title}}</h3> -->
 
-    <main v-if="article">
+<div v-if="article"   class="grid md:grid-cols-3 my-4  gap-4">
+   <div class="md:flex flex-col"></div>
+      <div class="flex flex-col shadow-md  p-2 md:p-6 text-center rounded">
+        <h3 class="text-2xl text-gray-600  font-bold mb-4 text-center rounded">
+           {{article.title}}
+           
+        </h3>
+        <p>{{article.description}}</p>
+         <div class="text-3xl mb-4">
+            <span class="text-center"> 
+              <img class="object-contain h-48 w-full" :src="article.urlToImage" alt="">
+            </span>
+        </div>
+        <p class="text-xl mb-4">{{article.content}}</p>
+       
+
+        <div class="text-2xl my-4">
+            <span class="">
+                <a target="_blank" class="bg-red-600 p-3 text-white my-4 rounded hover:bg-red-500" 
+                :href="article.url"
+                >Read on source site</a>
+             </span>
+        </div>
+    </div>
+   </div>
+
+   <div v-else class="grid md:grid-cols-3 my-4  gap-4">
+
+   </div>
+
+    <!-- <main v-if="article" class="grid md:grid-cols-3 my-4  gap-4">
         <p>{{article.content}}</p>
   <img :src="article.urlToImage" alt="">
+  <a target="-blank" :href="article.url">visit on source</a>
     </main>
 
     <main v-else>
         News is loading...
-    </main>
+    </main> -->
 
   
 </template>
