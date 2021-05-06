@@ -18,7 +18,7 @@
         <p class="text-xl mb-4">{{article.content}}</p>
        
 
-        <div class="text-2xl my-4">
+        <div class=" my-4">
             <span class="">
                 <a target="_blank" class="bg-red-600 p-3 text-white my-4 rounded hover:bg-red-500" 
                 :href="article.url"
@@ -67,9 +67,9 @@ mounted(){
     .then((res)=>{
     const id = this.id
       this.data = res
-      console.log(this.data)
-      console.log(this.data.data.articles[id])
-      console.log(this.id)
+    //   console.log(this.data)
+    //   console.log(this.data.data.articles[id])
+    //   console.log(this.id)
 
       this.article = this.data.data.articles[id]
 

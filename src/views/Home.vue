@@ -3,7 +3,6 @@
   <div class="md:flex flex-col"></div>
   <div class="flex flex-col   p-2 md:p-6 text-center ">
   <h2 class="text-3xl mb-10">News Loading...</h2>
- 
   <div class="text-2xl my-10 ">
             <span class="text-center"> 
               <img class="object-contain h-48 w-full" src="../assets/loader.gif" alt="">
@@ -159,7 +158,7 @@ export default {
       .then(res=>{
         // this.data = null 
         this.business_news = res 
-        console.log(this.business_news)
+
         window.scroll()
         
         // console.log(this.data.data.sources.map(e=>e.name))
@@ -173,7 +172,7 @@ export default {
       .then(res=>{
         // this.data = null 
         this.business = res 
-        console.log(this.business)
+    
         window.scroll()
         
         // console.log(this.data.data.sources.map(e=>e.name))
@@ -204,8 +203,7 @@ export default {
     axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${this.API_KEY}`)
     .then((res)=>{
       this.data = res
-      console.log(this.data)
-      console.log(res)
+      // console.log(res)
     })
 
 
