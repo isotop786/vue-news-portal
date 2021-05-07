@@ -21,6 +21,7 @@
 </div>
 </div>
 <div class="grid grid-rows-2"></div>
+<span v-if="source ==null"><h3>Latest News</h3></span>
 <div v-for="(a,i) in data.data.articles" :key="i"  class="grid md:grid-cols-3 my-4  gap-4">
    <div class="md:flex flex-col"></div>
       <div class="flex flex-col shadow-md  p-2 md:p-6 text-center rounded">
@@ -102,6 +103,7 @@
     </div>
    
       </div>
+      
   </div>
 
 

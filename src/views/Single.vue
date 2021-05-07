@@ -28,8 +28,28 @@
     </div>
    </div>
 
-   <div v-else class="grid md:grid-cols-3 my-4  gap-4">
+  
+<div v-else   class="grid md:grid-cols-3 my-4  gap-4">
+   <div class="md:flex flex-col"></div>
+      <div class="flex flex-col  p-2 md:p-6 text-center rounded">
+       
+        <h2 class="text-2xl">News is loading</h2>
+         <div class="text-3xl mb-4">
+            <span class="text-center"> 
+              <img class="object-contain h-48 w-full" src="../assets/loader.gif" alt="">
+            </span>
+        </div>
+        <p class="text-xl mb-4 text-yellow-300">
+            If doesn't load after 60 seconds, then check your connection
+        </p>
+       
 
+        <div class=" my-4">
+            <span class="">
+               
+             </span>
+        </div>
+    </div>
    </div>
 
     <!-- <main v-if="article" class="grid md:grid-cols-3 my-4  gap-4">
